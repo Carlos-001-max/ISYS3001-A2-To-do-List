@@ -15,7 +15,7 @@ export default function TodoList({ todos, onToggle, onDelete }) {
     <div className="rounded-lg overflow-hidden shadow-sm border border-gray-200">
       {todos.map(todo => (
         <TodoItem
-          key={todo.id}
+          key={todo._id}  // 改为 _id
           todo={todo}
           onToggle={onToggle}
           onDelete={onDelete}

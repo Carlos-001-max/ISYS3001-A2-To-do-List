@@ -5,7 +5,7 @@ export default function TodoItem({ todo, onToggle, onDelete }) {
         <input
           type="checkbox"
           checked={todo.completed}
-          onChange={() => onToggle(todo.id)}
+          onChange={() => onToggle(todo._id)}  // 改为 _id
           className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
         />
         <span
@@ -15,12 +15,12 @@ export default function TodoItem({ todo, onToggle, onDelete }) {
         </span>
       </div>
       <button
-        onClick={() => onDelete(todo.id)}
+        onClick={() => onDelete(todo._id)}  // 改为 _id
         className="ml-4 p-2 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-full transition-colors"
         title="Delete task"
       >
         🗑️
       </button>
     </div>
-  )
+  );
 }
